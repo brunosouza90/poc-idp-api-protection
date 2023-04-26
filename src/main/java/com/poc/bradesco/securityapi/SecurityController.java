@@ -17,8 +17,8 @@ public class SecurityController {
         
     }
 
-        /**
-     * endpoint onde o usuario tem que ter a role user
+    /**
+     * endpoint where the user has to have the role user
      */
     @GetMapping(value = "/has-role")
     @PreAuthorize("hasAnyAuthority('ROLE_USER')")
@@ -27,7 +27,7 @@ public class SecurityController {
     }
 
     /**
-     * endpoint onde o usuario tem que ter a role admin
+     * endpoint where the user has to have the role admin
      */
     @GetMapping(value = "/is-admin")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
